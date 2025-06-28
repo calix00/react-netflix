@@ -48,15 +48,26 @@ export default function Banner() {
       <div className='banner_contents'>
         <h1 className='banner_title'>{movie.title || movie.name || movie.original_name}</h1>
 
+        <h1 className='banner_description'>{truncate(movie?.overview, 100)}</h1>
+
         <div className='banner_buttons'>
           <button className='banner_button play'
-          onClick={() => setIsClicked(true)}
+          onClick={ () => setIsClicked(true)}
           >
-            Play</button>
-          <button className='banner_button info'>More Information</button>
+            <span className="material-icons">
+            play_arrow
+            </span>
+            재생
+          </button>
+          <button className='banner_button info'>
+            <span className="material-icons">
+              info
+            </span>
+            상세정보
+            </button>
         </div>
 
-        <h1 className='banner_description'>{truncate(movie?.overview, 100)}</h1>
+        
       </div>
       <div className='banner_fadeBottom' />
 

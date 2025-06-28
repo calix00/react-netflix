@@ -33,7 +33,7 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
 
   return (
     <section className='row'>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation
@@ -58,18 +58,19 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
           },
         }}
       >
-        <div id={id} className='row_posters'>
+        <div id={id} className="row_posters">
           {movies.map((movie) => (
             <SwiperSlide>
               <img
-              key={movie.id}
-              className={`row_poster ${isLargeRow && "row_posterLarge"}`}
-              src={`https://image.tmdb.org/t/p/original/${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              } `}
-              alt={movie.name}
-              onClick={() => handleClick(movie)}
-            />
+                key={movie.id}
+                style={{ padding: "25px 0" }}
+                className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+                src={`https://image.tmdb.org/t/p/original/${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                } `}
+                alt={movie.name}
+                onClick={() => handleClick(movie)}
+              />
             </SwiperSlide>
           ))}
         </div>

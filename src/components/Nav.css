@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 30px;
-  z-index: 1;
+  height: 15px;
+  z-index: 10;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -21,22 +21,102 @@
   left: 40px;
   width: 80px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .nav_avatar {
-  position: fixed;
   right: 40px;
-  width: 30px;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  border-radius: 4px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .nav_input {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: rgba(0, 0, 0, 0.582);
-  border-radius: 5px;
+  /* position: absolute; */
+  /* right: 30px; */
+  /* transform: translate(-50%, 0); */
+  /* background-color: rgba(0, 0, 0, 0.582); */
+  background: transparent;
   color: white;
   padding: 5px;
   border: none;
+  outline: none;
+}
+
+.nav_icons_container {
+  position: fixed;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+}
+
+.nav_icon {
+  color: white;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav_avatar_container {
+  position: relative;
+}
+
+.nav_dropdown {
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 6px 8px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  font-size: 10px;
+}
+
+.nav_dropdown p {
+  color: white;
+  margin: 5px 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav_dropdown p:last-child {
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+
+.nav_dropdown p:hover {
+  background-color: #333;
+  border-radius: 3px;
+}
+
+.nav_search_container {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  overflow: hidden;
+  max-width: 200px;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.nav_input_icon {
+  color: white;
+  margin-right: 6px;
+  font-size: 20px;
 }
